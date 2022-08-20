@@ -1,0 +1,6 @@
+{
+	// hugo site path dir, empty if use opening project
+	"site_path": "",
+	// fill lastmod when saving file
+	"auto_fill_lastmod": false,
+}

@@ -1,0 +1,5 @@
+[
+    { "caption": "Hugee: Version", "command": "hugo_version" },
+    { "caption": "Hugee: Fill Lastmod", "command": "hugee_fill_lastmod" },
+    { "caption": "Hugee: Build", "command": "hugo_build" },
+]
