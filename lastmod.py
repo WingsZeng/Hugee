@@ -28,4 +28,4 @@ class HugeeFillLastmodCommand(sublime_plugin.TextCommand):
                 region = sublime.Region(region.a + len(prefix), region.b)
                 time = datetime.datetime.now()
                 time_str = time.strftime("%Y-%m-%dT%H:%M:%S")
-                self.view.replace(edit, region, getCurrentTime())
+                self.view.replace(edit, region, time_str)
