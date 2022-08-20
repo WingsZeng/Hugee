@@ -3,7 +3,7 @@ import sublime_plugin
 import subprocess
 from enum import IntEnum
 from typing import Optional, List
-from .settings import settings
+from .settings import getSettings
 
 
 class Status(IntEnum):
@@ -50,6 +50,7 @@ def run(cmd: List[str]) -> Result:
     :returns:   Command Result
     :rtype:     Result
     """
+    settings = getSettings()
     try:
         out = subprocess.check_output(cmd, cwd=settings.get('site_path'), universal_newlines=True, stderr=subprocess.STDOUT)
         return Result(Status.SUCCESS, out)

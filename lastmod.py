@@ -1,7 +1,7 @@
 import sublime
 import sublime_plugin
 import datetime
-from .settings import settings
+from .settings import getSettings
 
 
 class SaveListener(sublime_plugin.ViewEventListener):
@@ -9,7 +9,8 @@ class SaveListener(sublime_plugin.ViewEventListener):
         """
         Called on pre save to auto fill lastmod.
         """
-        if settings is not None and settings.get('auto_fill_lastmod'):
+        settings = getSettings()
+        if settings.get('auto_fill_lastmod'):
             self.view.run_command("hugee_auto_fill_lastmod")
 
 
